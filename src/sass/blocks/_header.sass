@@ -1,0 +1,57 @@
+.header
+  position: relative
+  top: 23px
+  left: 50%
+  transform: translateX(-50%)
+  width: 100%
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+
+  &__nav
+    width: 600px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__link
+    color: #ffffff
+    font-size: 15px
+    font-weight: 400
+    text-decoration: none
+    position: relative
+    &:hover
+      color: $main-color
+      text-decoration: underline
+    &:not(:last-child):before
+      content: ""
+      display: block
+      height: 23px
+      width: 1px
+      background-color: rgba(255, 255, 255, .4)
+      position: absolute
+      top: 0
+      right: -15px
+
+  &__contacts
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: right
+  &__descr
+    margin-bottom: 5px
+    color: #ffffff
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+  &__phone
+    display: block
+    color: #ffffff
+    font-size: 19px
+    font-weight: 700
+  &__burder
+    display: none
+
+
+
