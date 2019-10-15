@@ -1,0 +1,84 @@
+.catalog
+  padding-top: 53px
+  background-color: #ffffff
+  &__content
+    margin-top: 34px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &-item
+    max-width: 261px
+    min-height: 355px
+    border: 1px solid #e9e9e9
+    padding: 2px
+    overflow: hidden
+    &__header
+      padding: 24px 0 22px 0
+      text-align: center
+      background-color: #25333c
+      color: #ffffff
+      font-size: 16px
+      font-weight: 700
+      text-transform: uppercase
+    &__wrapper
+      display: flex
+      width: calc(200% + 20px)
+    &__content
+      padding: 14px 15px 25px 15px
+      margin-right: 10px
+      display: flex
+    &__first
+      width: 50%
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-right: 10px
+      transform: translateX(0)
+    &__subtitle
+      margin-top: 12px
+      color: #2e2e2e
+      font-size: 14px
+      font-weight: 400
+      text-transform: uppercase
+    &__price
+      color: #ec644b
+      font-size: 28px
+      line-height: 30px
+    &__descr
+      color: #2e2e2e
+      font-size: 14px
+      font-weight: 300
+      line-height: 20px
+      text-align: center
+      margin-top: 12px
+
+    &__second
+      width: 50%
+      margin-left: 10px
+      position: relative
+      //transform: translateX(-109%)
+    transform: translateX(0)
+    &__list
+      list-style-type: none
+      padding-left: 10px
+      li
+        margin-bottom: 10px
+        position: relative
+        &:before
+          content: ""
+          width: 5px
+          height: 5px
+          background-color: $main-color
+          position: absolute
+          top: 7px
+          left: -10px
+
+  &__back
+    display: block
+    text-align: center
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    color: $main-color
+    text-transform: uppercase

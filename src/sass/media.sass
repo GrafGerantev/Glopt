@@ -1,16 +1,39 @@
+@media (max-width: 1024px)
+  .header
+    &__contacts
+      display: none
+  .logo
+    width: 63px
+    height: auto
+  .promo
+    &__delivery
+      justify-content: center
+    .delivery-item
+      margin: 15px
+
+  .work
+    &__wrapper
+      justify-content: center
+    &-item
+      margin: 18px
+
+  .catalog
+    &__content
+      justify-content: center
+    &-item
+      margin: 10px
+
 @media (max-width: 991px)
   .header
     &__nav
       justify-content: center
     &__link
       font-size: 14px
-      margin-right: 18px
+      margin-right: 12px
       &:not(:last-child):before
-        right: -10px
+        right: -5px
     &__phone
       font-size: 14px
-  .logo
-    width: 63px
   .promo
     padding-top: 156px
     &__title
@@ -22,56 +45,122 @@
     .delivery-item
       max-width: 246px
       margin: 0 20px 15px 20px
+  .logo
+    margin-right: 10px
+  .advantages
+    &__item
+      width: 50%
+
+  .work
+    &__wrapper
+      justify-content: center
+    &-item
+      margin-right: 30px
+      margin-top: 30px
+
 
 @media (max-width: 767px)
   .header
-    &__contacts
-      display: none
+    height: 45px
+    &__inner
+      justify-content: center
+    &__nav
+      position: absolute
+      top: -23px
+      left: -100%
+      display: flex
+      flex-direction: column
+      width: 80%
+      height: 100vh
+      text-align: center
+      background-color: rgba(0, 0, 0, .7)
+      padding: 20px 0
+      margin-left: -10px
+      transition: all .3s
+      &_active
+        left: 0
     &__link
-      margin-right: 14px
+      display: block
+      margin: 15px 0
+      font-size: 20px
       &:not(:last-child):before
-        right: -7px
+        display: none
+        margin-right: 14px
+        &:not(:last-child):before
+          right: -7px
   .logo
-    margin-right: 10px
+    display: none
+  .burger
+    display: flex
 
   .promo
+    padding-top: 132px
     &__title
       font-size: 50px
     &__subtitle
       font-size: 28px
 
-@media (max-width: 575px)
-  .header
-    &__nav
-      display: none
-    &__burger
-      position: absolute
-      top: 0
-      right: 20px
-      width: 35px
-      height: 20px
-      display: flex
+  .advantages
+    &__item
       flex-direction: column
       align-items: center
-      justify-content: space-between
-      span
-        display: block
-        width: 100%
-        height: 2px
-        background-color: #ffffff
-        transition: all .2s
-      &_active
-        span:first-child
-          transform: translateY(17px) rotate(45deg)
-        span:nth-child(2)
-          transform: scale(0)
-        span:last-child
-          transform: translateY(-1px) rotate(-45deg)
-      &:hover
-        cursor: pointer
+      margin-bottom: 22px
+    &__subtitle
+      text-align: center
+    &__text
+      margin-top: 10px
+  .form
+    flex-direction: column
+    align-items: center
+    input
+      margin-bottom: 15px
+      &:nth-child(2)
+        margin-bottom: 15px
 
 
-
-
+@media (max-width: 575px)
   .logo
     display: none
+  .title
+    font-size: 16px
+    line-height: 22px
+  .subtitle
+    font-size: 14px
+  .promo
+    &__suptitle
+      display: none
+    &__title
+      font-size: 30px
+    &__subtitle
+      font-size: 20px
+      margin-top: 30px
+
+    .delivery-item
+      max-width: 230px
+      &__descr
+        font-size: 12px
+  .button__call
+    display: none
+
+  .advantages
+    &__wrapper
+      flex-direction: column
+      align-items: center
+    &__item
+      width: 100%
+
+  .work
+    &-item
+      align-items: center
+      max-width: 100%
+      margin: 18px 0 0 0
+      &__descr
+        text-align: justify
+      &__img
+        width: 310px
+        height: auto
+
+  .employees
+    &__descr
+      font-size: 14px
+      line-height: 22px

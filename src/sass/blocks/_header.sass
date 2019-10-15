@@ -1,9 +1,11 @@
 .header
-  position: relative
+  position: fixed
   top: 23px
   left: 50%
   transform: translateX(-50%)
   width: 100%
+  z-index: 1000
+  height: 100px
   &__inner
     display: flex
     align-items: center
@@ -15,6 +17,7 @@
     display: flex
     justify-content: space-between
     align-items: center
+    position: relative
   &__link
     color: #ffffff
     font-size: 15px
@@ -50,7 +53,7 @@
     color: #ffffff
     font-size: 19px
     font-weight: 700
-  &__burder
+  &__burger
     display: none
 
 
