@@ -61,9 +61,14 @@
 
 @media (max-width: 767px)
   .header
-    height: 45px
+    height: auto
+    &-fixed
+      display: block
+      .header__nav
+        margin-right: 0
     &__inner
       justify-content: center
+      padding: 10px 0
     &__nav
       position: absolute
       top: -23px
@@ -71,7 +76,7 @@
       display: flex
       flex-direction: column
       width: 80%
-      height: 100vh
+      height: calc(100vh + 23px)
       text-align: center
       background-color: rgba(0, 0, 0, .7)
       padding: 20px 0
