@@ -116,7 +116,15 @@
       margin-bottom: 15px
       &:nth-child(2)
         margin-bottom: 15px
-
+  .questions
+    &__form
+      textarea
+        width: 268px
+        margin-top: 0
+        margin-bottom: 10px
+    &-wrapper
+      &__button
+        bottom: 0
 
 @media (max-width: 575px)
   .logo
@@ -164,3 +172,27 @@
     &__descr
       font-size: 14px
       line-height: 22px
+  .questions
+    &__form
+      textarea
+        width: 90%
+        height: 150px
+
+  .map
+    min-height: 300px
+    iframe
+      min-height: 300px
+  .footer
+    &-header
+      flex-direction: column
+      &__slogan
+        font-size: 11px
+        margin: 0 auto 10px
+      &__contact
+        margin: 0 auto
+    &-info
+      flex-direction: column
+      &__policy
+        margin-top: 10px
+      &__site
+        margin-top: 10px

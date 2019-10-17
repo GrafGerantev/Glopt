@@ -6,14 +6,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Glopt</title>
 </head>
 <body>
-<!--Sprite-->
-<svg style="display: none;">
-    symbol id="cargo"
-</svg>
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -21,12 +18,12 @@
                     <img src="icons/logo/logo.svg" alt="Logo" class="logo__img">
                 </a>
                 <nav class="header__nav">
-                    <a href="#" class="header__link">Преимущества</a>
-                    <a href="#" class="header__link">Наша работа</a>
-                    <a href="#" class="header__link">Цены</a>
-                    <a href="#" class="header__link">Схема работы</a>
-                    <a href="#" class="header__link">Отзывы</a>
-                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#advantages" class="header__link">Преимущества</a>
+                    <a href="#work" class="header__link">Наша работа</a>
+                    <a href="#catalog" class="header__link">Цены</a>
+                    <a href="#schema" class="header__link">Схема работы</a>
+                    <a href="#reviews" class="header__link">Отзывы</a>
+                    <a href="#map" class="header__link">Контакты</a>
                 </nav>
                 <!--/.header__nav-->
                 <div class="burger">
@@ -46,7 +43,7 @@
         <!--/.container-->
     </header>
     <!--/.header-->
-    <section class="promo">
+    <section class="promo" id="promo">
         <div class="container">
             <div class="promo__text">
                 <div class="promo__suptitle">Global Opt - логистика полного цикла из Китая в Россию</div>
@@ -87,7 +84,7 @@
         <!--/.container-->
     </section>
     <!--/.promo-->
-    <section class="advantages">
+    <section class="advantages" id="advantages">
         <div class="container">
             <h2 class="title">Преимущества работы с GlobalOpt</h2>
             <div class="advantages__wrapper">
@@ -161,7 +158,7 @@
         <!--/.container-->
     </section>
     <!--/.advantages-->
-    <section class="work">
+    <section class="work" id="work">
         <div class="container">
             <h2 class="title">Наша работа - больше чем просто доставка</h2>
             <hr>
@@ -208,7 +205,7 @@
         <!--/.container-->
     </section>
     <!--/.employees-->
-    <section class="catalog">
+    <section class="catalog" id="catalog">
         <div class="container">
             <h2 class="title">Цены на любой вариант доставки</h2>
             <hr>
@@ -373,7 +370,7 @@
                     <input name="phone" placeholder="Ваш телефон...">
                     <input name="email" placeholder="Ваш E-mail..." type="email">
                 </form>
-                <button class="button consultation__button">отправить заявку</button>
+                <button class="button button-request consultation__button">отправить заявку</button>
             </fieldset>
         </div>
         <!--/.container-->
@@ -393,7 +390,7 @@
     <!--/.container-->
 </section>
     <!--/.employees-->
-    <section class="schema">
+    <section class="schema" id="schema">
         <div class="container">
             <h2 class="title">Схема работы с нами</h2>
             <div class="schema__wrapper">
@@ -445,5 +442,117 @@
         <!--/.container-->
     </section>
     <!--/.schema-->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="title">отзывы наших клиентов</h2>
+            <hr>
+            <div class="subtitle">
+                Мы всегда стараемся помочь клиентам, что бы они обращались к нам снова
+            </div>
+            <div class="reviews-carousel">
+                <div class="reviews-carousel__item">
+                    <img src="img/slider/1.jpg" alt="img" class="reviews-carousel__img">
+                    <div class="reviews-carousel__subtitle">Анисимова Ольга</div>
+                    <div class="reviews-carousel__descr">
+                        Хочу рассказать о компании Global Opt. Самое главное что меня радует, это быстрый поиск и анализ определенного товара. Доставляла через компанию уже много раз, от расходных материалов для отеля, ло дольших партий детской одежды. Буду продолжать пользтваьбся услугами даной компании
+                    </div>
+                </div>
+                <!--/.reviews-carousel__item-->
+                <div class="reviews-carousel__item">
+                    <img src="img/slider/1.jpg" alt="img" class="reviews-carousel__img">
+                    <div class="reviews-carousel__subtitle">Иванова Ирина</div>
+                    <div class="reviews-carousel__descr">
+                        Хочу рассказать о компании Global Opt. Самое главное что меня радует, это быстрый поиск и анализ определенного товара. Доставляла через компанию уже много раз, от расходных материалов для отеля, ло дольших партий детской одежды. Буду продолжать пользтваьбся услугами даной компании
+                    </div>
+                </div>
+                <!--/.reviews-carousel__item-->
+                <div class="reviews-carousel__item">
+                    <img src="img/slider/1.jpg" alt="img" class="reviews-carousel__img">
+                    <div class="reviews-carousel__subtitle">Петрова Анастасия</div>
+                    <div class="reviews-carousel__descr">
+                        Хочу рассказать о компании Global Opt. Самое главное что меня радует, это быстрый поиск и анализ определенного товара. Доставляла через компанию уже много раз, от расходных материалов для отеля, ло дольших партий детской одежды. Буду продолжать пользтваьбся услугами даной компании
+                    </div>
+                </div>
+                <!--/.reviews-carousel__item-->
+            </div>
+            <!--/.reviews-carousel-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--/.reviews-->
+    <section class="questions">
+        <div class="container">
+            <div class="questions-wrapper">
+                <div class="questions-wrapper__header">
+                    <div class="questions-wrapper__title">
+                        Остались вопросы?
+                    </div>
+                    <div class="questions-wrapper__subtitle">
+                        Напишите нам!
+                    </div>
+                </div>
+                <!--/.questions-wrapper__header-->
+                <div class="questions-wrapper__content">
+                    <form action="#"  class="form questions__form" method="post">
+                        <input name="name" placeholder="Ваше имя..." type="text">
+                        <input name="phone" placeholder="Ваш телефон...">
+                        <input name="email" placeholder="Ваш E-mail..." type="email">
+                        <textarea name="message" placeholder="Сообщение..."></textarea>
+                    </form>
+                    <button class="button button-request questions-wrapper__button">Отправить заявку</button>
+                </div>
+                <!--/.questions-wrapper__content-->
+            </div>
+            <!--/.questions-wrapper-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--/.questions-->
+    <div class="map" id="map">
+        <iframe src="https://yandex.ru/map-widget/v1/-/CGw~A48e"frameborder="1" allowfullscreen="true"></iframe>
+    </div>
+    <!--/.map-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-header">
+                <div class="footer-header__info">
+                    <a href="#" class="logo logo-min footer-header__logo">
+                        <img src="icons/logo/logo.svg" alt="Logo" class="logo__img">
+                    </a>
+                    <div class="footer-header__slogan">Global Opt - Доставка грузов из Китая в Россию и СНГ</div>
+                </div>
+                <!--/.footer-header__info-->
+                <div class="footer-header__contact">
+                    <div class="header__contacts footer-header__contacts">
+                        <div class="header__descr">Есть вопросы?</div>
+                        <a href="tel:+79264230100" class="header__phone">+7 (926) 423 01 00</a>
+                    </div>
+                    <!--/.header__contacts-->
+                    <button class="button button_call">перезвоните нам</button>
+                </div>
+            </div>
+            <!--/.footer-header-->
+            <hr>
+            <div class="footer-info">
+                <div class="footer-info__cooper">&copy; 2010 Scratch.com.ua</div>
+                <a href="#" class="footer-info__policy">Политика конфидециальности</a>
+                <div class="footer-info__site">
+                    <div class="footer-info__text">Создание сайта:</div>
+                    <img src="icons/logo/site.png" alt="logo">
+                </div>
+            </div>
+            <!--/.footer-info-->
+        </div>
+        <!--/.container-->
+    </footer>
+    <!--/.footer-->
+    <a href="#promo" class="pageup">
+        <img src="icons/arrows/up.svg" alt="up">
+    </a>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
