@@ -80,7 +80,7 @@
                 <!--/.delivery-item-->
             </div>
             <!--/.promo__delivery-->
-            <button class="button button_big">Получить расчет</button>
+            <button data-modal="payment" class="button button_big">Получить расчет</button>
         </div>
         <!--/.container-->
     </section>
@@ -259,7 +259,7 @@
                                 <div class="catalog-item__subtitle">Доставка 15-28 дней</div>
                                 <div class="catalog-item__price">от 1&#036; за 1 кг</div>
                                 <div class="catalog-item__descr">ЖД перевозки грузов из Китая в Россию от 2 недель с прохождением таможни</div>
-                                <button class="button button_mt25">Подробнее</button>
+                                <button class="button catalog-button button_mt25">Подробнее</button>
                             </div>
                             <!--/.catalog-item__main-->
                             <div class="catalog-item__second">
@@ -275,7 +275,8 @@
                                     </li>
                                 </ul>
                                 <!--/.catalog-item__list-->
-                                <a href="#" class="catalog__back">Назад</a>
+                               <!-- <a href="#" class="catalog__back">Назад</a>-->
+                                <button class="button catalog-back button_mt25">назад</button>
                             </div>
                             <!--/.catalog-item__second-->
                         </div>
@@ -293,7 +294,7 @@
                                 <div class="catalog-item__subtitle">Доставка 15-20 дней</div>
                                 <div class="catalog-item__price">от 1&#036; за 1 кг</div>
                                 <div class="catalog-item__descr">Автоперевозки грузов из Китая в Россию от 2 недель с прохождением таможни</div>
-                                <button class="button button_mt25">Подробнее</button>
+                                <button class="button catalog-button button_mt25">Подробнее</button>
                             </div>
                             <!--/.catalog-item__main-->
                             <div class="catalog-item__second">
@@ -309,7 +310,8 @@
                                     </li>
                                 </ul>
                                 <!--/.catalog-item__list-->
-                                <a href="#" class="catalog__back">Назад</a>
+                                <!--<a href="#" class="catalog__back">Назад</a>-->
+                                <button class="button catalog-back button_mt25">назад</button>
                             </div>
                             <!--/.catalog-item__second-->
                         </div>
@@ -327,7 +329,7 @@
                                 <div class="catalog-item__subtitle">Доставка 1-12 дней</div>
                                 <div class="catalog-item__price">от 6&#036; за 1 кг</div>
                                 <div class="catalog-item__descr">Авиаперевозки грузов из Китая в Россию до 2 недель с прохождением таможни</div>
-                                <button class="button button_mt25">Подробнее</button>
+                                <button class="button catalog-button button_mt25">Подробнее</button>
                             </div>
                             <!--/.catalog-item__main-->
                             <div class="catalog-item__second">
@@ -343,7 +345,8 @@
                                     </li>
                                 </ul>
                                 <!--/.catalog-item__list-->
-                                <a href="#" class="catalog__back">Назад</a>
+                                <!--<a href="#" class="catalog__back">Назад</a>-->
+                                <button class="button catalog-back button_mt25">назад</button>
                             </div>
                             <!--/.catalog-item__second-->
                         </div>
@@ -367,10 +370,10 @@
                         <img src="icons/icon_bg/2.png" alt="icon" class="consultation__img">
                     </div>
                 </legend>
-                <form action="#"  class="form consultation__form" method="post">
-                    <input name="name" placeholder="Ваше имя..." type="text">
-                    <input name="phone" placeholder="Ваш телефон...">
-                    <input name="email" placeholder="Ваш E-mail..." type="email">
+                <form action="#" id="consultation-form" class="form consultation__form" method="post">
+                    <div><input name="name" placeholder="Ваше имя..." type="text"></div>
+                    <div><input name="phone" placeholder="Ваш телефон..."></div>
+                    <div><input name="email" placeholder="Ваш E-mail..." type="email"></div>
                 </form>
                 <button class="button button-request consultation__button">отправить заявку</button>
             </fieldset>
@@ -495,7 +498,7 @@
                 </div>
                 <!--/.questions-wrapper__header-->
                 <div class="questions-wrapper__content">
-                    <form action="#"  class="form questions__form" method="post">
+                    <form action="#" id="questions-form" class="form questions__form" method="post">
                         <input name="name" placeholder="Ваше имя..." type="text">
                         <input name="phone" placeholder="Ваш телефон...">
                         <input name="email" placeholder="Ваш E-mail..." type="email">
@@ -548,6 +551,22 @@
         <!--/.container-->
     </footer>
     <!--/.footer-->
+    <div class="overlay">
+        <div class="modal" id="payment">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+            <form action="#" id="modal-form"  class="form modal__form" method="post">
+                <input name="name" placeholder="Ваше имя..." type="text">
+                <input name="phone" placeholder="Ваш телефон...">
+                <input name="email" placeholder="Ваш E-mail..." type="email">
+            </form>
+            <button class="button button-request modal__button">отправить заявку</button>
+        </div>
+    </div>
+
+
+
     <a href="#promo" class="pageup">
         <img src="icons/arrows/up.svg" alt="up">
     </a>
@@ -555,6 +574,7 @@
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -52,16 +52,8 @@ $(document).ready(function(){
         /*console.log(this);*/
         $('.burger').toggleClass('burger_active');
     });
-    
-/*    function toggleSlide(item) {
-        $(item).each(function (i) {
-            $(this).on('click', function (e) {
-                e.preventDefault();
-                $('.catalog-item__first').eq(i).toggleClass('catalog-item__first_active');
-                $('.catalog-item__second').eq(i).toggleClass('catalog-item__second_active');
-            });
-        });
-    };*/
+
+    //Catalog
     function toggleSlide(item) {
         $(item).each(function (i) {
             $(this).on('click', function(e) {
@@ -74,5 +66,47 @@ $(document).ready(function(){
     };
     toggleSlide('.catalog-button');
     toggleSlide('.catalog-back');
+    //Modal
+    $('[data-modal=payment]').on('click', function () {
+        $('.overlay, #payment').fadeIn('slow');
+        $('body').addClass('no-scroll');
+    })
+    $('.modal__close').on('click', function () {
+        $('.overlay, #payment').fadeOut('slow');
+        $('body').removeClass('no-scroll');
+    });
+
+    //Validate Form
+    function valideForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                /*name: "required",*/
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                /*name: "Пожалуйста введите свое имя",*/
+                name: {
+                    required: "Пожалуйста введите свое имя",
+                    minlength: jQuery.validator.format("Введите не менее {0} символа!")
+                },
+                phone: "Пожалуйста введите свой телефон",
+                email: {
+                    required: "We need your email address to contact you",
+                    email: "Введите адрес как на примере <br> name@domain.com"
+                }
+            }
+        });
+    };
+    valideForms('#consultation-form');
+    valideForms('#questions-form');
+    valideForms('#modal-form');
 
 });
