@@ -500,10 +500,10 @@
                 <!--/.questions-wrapper__header-->
                 <div class="questions-wrapper__content">
                     <form action="mailer/smart.php" id="questions-form" class="form questions__form" method="post">
-                        <input name="name" placeholder="Ваше имя..." type="text">
-                        <input name="phone" placeholder="Ваш телефон...">
-                        <input name="email" placeholder="Ваш E-mail..." type="email">
-                        <textarea name="message" placeholder="Сообщение..."></textarea>
+                        <div><input name="name" placeholder="Ваше имя..." type="text"></div>
+                        <div><input name="phone" placeholder="Ваш телефон..."></div>
+                        <div><input name="email" placeholder="Ваш E-mail..." type="email"></div>
+                        <div class="form-message"><textarea name="message" placeholder="Сообщение..."></textarea></div>
                         <button type="submit" class="button button-request questions-wrapper__button">Отправить заявку</button>
                     </form>
                 </div>

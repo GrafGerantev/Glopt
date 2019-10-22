@@ -130,13 +130,17 @@
   .questions
     &__form
       textarea
-        width: 268px
         margin-top: 0
         margin-bottom: 10px
+      div
+        &:nth-child(2)
+          input
+            margin: 0 0 15px 0
     &-wrapper
       &__button
         bottom: 0
-
+  .form-message
+    width: 268px
 @media (max-width: 575px)
   .logo
     display: none
@@ -186,7 +190,7 @@
   .questions
     &__form
       textarea
-        width: 90%
+
         height: 150px
 
   .map
